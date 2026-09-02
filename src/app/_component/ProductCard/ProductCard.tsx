@@ -141,6 +141,7 @@
 
 import { ProductType } from "@/src/api/types/productType";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export default function ProductCard({ product }: { product: ProductType }) {
@@ -174,13 +175,15 @@ export default function ProductCard({ product }: { product: ProductType }) {
 
           {/* Product Image */}
           <div className="w-full h-[280px] flex items-center justify-center overflow-hidden">
-            <Image
-              width={250}
-              height={250}
-              src={product.imageCover}
-              alt={product.title}
-              className="w-full h-full object-contain"
-            />
+            <Link href="/ProductDetails">
+              <Image
+                width={250}
+                height={250}
+                src={product.imageCover}
+                alt={product.title}
+                className="w-full h-full object-contain"
+              />
+            </Link>
           </div>
         </div>
 
