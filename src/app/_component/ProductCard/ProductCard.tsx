@@ -175,7 +175,7 @@ export default function ProductCard({ product }: { product: ProductType }) {
 
           {/* Product Image */}
           <div className="w-full h-[280px] flex items-center justify-center overflow-hidden">
-            <Link href="/ProductDetails">
+            <Link href={`/ProductDetails/${product._id}`}>
               <Image
                 width={250}
                 height={250}

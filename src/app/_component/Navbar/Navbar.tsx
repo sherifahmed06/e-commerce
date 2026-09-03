@@ -24,7 +24,7 @@ import {
 export default function Navbar() {
   return (
     <NavigationMenu className="p-5 max-w-full sticky top-0 z-50 bg-white border-b">
-      <NavigationMenuList className="container mx-auto xl:max-w-7xl w-full flex justify-between items-center">
+      <NavigationMenuList className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <div className="img">
           <Image src={logo} alt="Fresh Cart" />
@@ -44,26 +44,28 @@ export default function Navbar() {
               </InputGroupAddon>
             </InputGroup>
           </Field>
-          <NavigationMenuItem>
-            <Link className="hover:text-green-600" href="/">
-              Home
-            </Link>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <Link className="hover:text-green-600" href="/">
-              Shop
-            </Link>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <Link className="hover:text-green-600" href="/">
-              Categories
-            </Link>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <Link className="hover:text-green-600" href="/">
-              Brands
-            </Link>
-          </NavigationMenuItem>
+          <div className="xl:flex gap-6 items-center justify-center hidden">
+            <NavigationMenuItem>
+              <Link className="hover:text-green-600" href="/">
+                Home
+              </Link>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <Link className="hover:text-green-600" href="/">
+                Shop
+              </Link>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <Link className="hover:text-green-600" href="/">
+                Categories
+              </Link>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <Link className="hover:text-green-600" href="/">
+                Brands
+              </Link>
+            </NavigationMenuItem>
+          </div>
           <div className="support flex items-center gap-2 border-e pe-0 me-0">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -133,44 +135,44 @@ export default function Navbar() {
           </Button>
 
           {/* Hamburger - Mobile only */}
-<NavigationMenuItem className="lg:hidden">
-  <NavigationMenuTrigger className="bg-green-600 text-white rounded-full w-10 h-10 p-0 flex items-center justify-center hover:bg-green-700 [&>svg:last-child]:hidden">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      strokeWidth={1.5}
-      stroke="currentColor"
-      className="size-6"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-      />
-    </svg>
-  </NavigationMenuTrigger>
+          <NavigationMenuItem className="lg:hidden">
+            <NavigationMenuTrigger className="bg-green-600 text-white rounded-full w-10 h-10 p-0 flex items-center justify-center hover:bg-green-700 [&>svg:last-child]:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="size-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+            </NavigationMenuTrigger>
 
-  <NavigationMenuContent>
-    <ul className="w-96">
-      <ListItem href="/" title="Home">
-        Home
-      </ListItem>
+            <NavigationMenuContent>
+              <ul className="w-96">
+                <ListItem href="/" title="Home">
+                  Home
+                </ListItem>
 
-      <ListItem href="/shop" title="Shop">
-        Shop
-      </ListItem>
+                <ListItem href="/shop" title="Shop">
+                  Shop
+                </ListItem>
 
-      <ListItem href="/categories" title="Categories">
-        Categories
-      </ListItem>
+                <ListItem href="/categories" title="Categories">
+                  Categories
+                </ListItem>
 
-      <ListItem href="/brands" title="Brands">
-        Brands
-      </ListItem>
-    </ul>
-  </NavigationMenuContent>
-</NavigationMenuItem>
+                <ListItem href="/brands" title="Brands">
+                  Brands
+                </ListItem>
+              </ul>
+            </NavigationMenuContent>
+          </NavigationMenuItem>
         </div>
       </NavigationMenuList>
     </NavigationMenu>

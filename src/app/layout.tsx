@@ -22,9 +22,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="">
         <FirstNav />
         <Navbar />
-        <div className="container mx-auto px-4 md:px-0 xl:max-w-7xl">
-          {children}
-        </div>
+        <div className="container mx-auto xxl:max-w-7xl">{children}</div>
         <Footer />
       </body>
     </html>
